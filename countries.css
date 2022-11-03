@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_wrapper_1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #CDF0EA;
+}
+
+.container_1 {
+    margin: 20px;
+    border: 1px solid black;
+    padding: 12px;
+    transition: translate .4s,box-shadow .4s;
+    cursor: pointer;
+    border: 1px solid #6E85B2;
+    border-radius: 10px;
+    font-family: 'Dangrek', cursive;
+}
+
+.container_1:hover{
+    translate: 0 -10px;
+    box-shadow: 0px 5px 8px 0.2px #6E85B2;
+    background-color: #EEF1FF;
+}
+
+#details{
+    position:relative;
+    translate: -50% -50%;
+    left: 50%;
+    top: 50%;   
+}
+
+#name{
+    display: flex;
+    font-size: 22px;
+    justify-content: center;
+}
+
+.moreinfo{
+    
+    position: fixed;
+    border: 1px solid black;
+    width: 735px;
+    height: 85vh;
+    translate: -50%;
+    left: 50%;
+    bottom: 5%;
+    animation: staterAnimation .8s;
+    background-color: #D2DAFF;
+    border: 1px sold #EEF1FF;
+    border-radius: 20px;
+}
+
+@keyframes staterAnimation {
+    from{
+        scale: calc(0);
+    }
+    50%{
+        scale: calc(1.08);
+    }
+    to{
+        scale: calc(1);
+    }
+}
+
+#moreinfo_details{
+    position: absolute;
+    translate: -50% -50%;
+    left: 50%;
+    top: 50%;
+    font-family: 'Dangrek', cursive;
+}
+
+.ending_animation{
+    animation: endingAnimation .4s forwards;
+}
+
+@keyframes endingAnimation {
+    from{
+        scale: calc(1);
+    }
+    50%{
+        scale: calc(1.08);
+    }
+    to{
+        scale: calc(0);
+    }
+}
+
+.blurEffect{
+    animation: blurAnimation .5s forwards;
+}
+
+@keyframes blurAnimation {
+    from{
+        filter: blur(0);
+    }to{
+        filter: blur(4px);
+    }
+}
+
+header{
+   background-color: #AAC4FF;
+   border-bottom: solid #AAC4FF 2px;
+}
+
+nav{
+    display: flex; 
+    align-items: flex-end;
+    justify-content:center;
+    padding-top: 30px;
+}
+#logo{
+    width: 300px;
+    margin-right: 30px;
+}
+input{
+    width: 339px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 20px;
+}
+#searchBtn{
+    width: 120px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: #F9F9F9;
+    border: 1px solid #748DA6;
+    font-family: 'Dangrek', cursive;
+}
+#searchBtn:hover{
+    background-color: #EEF1FF;
+}
+
+.option{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    padding-bottom: 50px;
+    font-family: 'Dangrek', cursive;
+}
+.sort{
+    width: 120px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: #F9F9F9;
+    border: none;
+    font-family: 'Dangrek', cursive;
+}
+.sort:hover{
+    background-color: #EEF1FF;
+}
+.select{
+    width: 200px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: #F9F9F9;
+    border: none;
+    font-family: 'Dangrek', cursive;
+    text-align: center;
+}
+.select:hover{
+    background-color: #EEF1FF;
+}

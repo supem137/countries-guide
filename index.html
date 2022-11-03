@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries</title>
+    <script defer src="countries.js"></script>
+    <link rel="stylesheet" href="countries.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img id="logo" src="./svg/logo.png" alt="logo" />
+        <input data_searchBox type="text" />
+        <button id="searchBtn" data_searchBtn>Search</button>
+      </nav>
+
+      <div class="option">
+        <button class="sort" data-sort>Sort</button>
+        <select class="select" data_select>
+          <option value="All">All</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Americas">Americas</option>
+          <option value="Africa">Africa</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+      </div>
+    </header>
+    <div class="main_wrapper_1" data_wrapper_1></div>
+    <div class="main_wrapper_2" data_wrapper_2></div>
+  </body>
+</html>
