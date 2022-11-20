@@ -6,6 +6,9 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color:#CDF0EA;
+}
 .main_wrapper_1{
     display: flex;
     flex-wrap: wrap;
@@ -174,3 +177,42 @@ input{
 .select:hover{
     background-color: #EEF1FF;
 }
+
+/* error message css */
+#errorBox{
+    background-color:#eeefec;
+    color:#dd2235;
+    width:300px;
+    height:180px;
+    border-radius:10px;
+    margin: 50px;
+  }
+  
+  #btnOk{
+    width:120px;
+    height:35px;
+    border-radius:25px;
+    border:none;
+    position:relative;
+    translate:-50%;
+    left:50%;
+    top:30%;
+    background-color:#dd2235;
+    color:#e7e6e7;
+  }
+  
+  #Err{
+    font-size:35px;
+    text-align:center;
+    position:relative;
+    translate:0 -50%;
+    top:20%;
+  }
+  
+  #messErr{
+     text-align:center;
+     position:relative;
+     translate:-50%;
+     left:50%;
+     top:16%;
+  }

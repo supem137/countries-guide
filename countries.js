@@ -1,5 +1,6 @@
+//this is the error message branch :)
 class CountryGuide {
-    //this is the error message branch :)
+
     #valuesOfAllData;
 
     getAllData() {
@@ -10,27 +11,45 @@ class CountryGuide {
     }
 
     async addResourceOfData(name) {
+        let data;
 
         try {
 
             let country_name = document.querySelector('[data_searchBox]').value;
             let response = await fetch(`https://restcountries.com/v3.1/${name}/${country_name}`);
-            let data = await response.json();
 
-            document.querySelector('[data_wrapper_1]').innerHTML = "";
+            if (response.status === 404) {
 
-            this.#valuesOfAllData = data;
+                document.querySelector('[data_wrapper_1]').innerHTML =
+                    `<div id='errorBox'>
+                <div id='Err'>ERROR</div>
+                <div id='messErr'>Oops! Please enter valid country</div>
+                <button id='btnOk'>TRY AGAIN</button>
+                </div>
+                `;
 
-            data.forEach(element => {
-                this.createHTMLelements(element);
-            });
+                let btnOk = document.querySelector('#btnOk');
+                btnOk.addEventListener('click', () => {
+                    document.querySelector('#errorBox').style.display = "none";
+                    document.querySelector('[data_searchBox]').focus();
+                });
+
+            } else {
+
+                data = await response.json();
+
+                document.querySelector('[data_wrapper_1]').innerHTML = "";
+
+                this.#valuesOfAllData = data;
+
+                data.forEach(element => {
+                    this.createHTMLelements(element);
+                });
+            }
 
         } catch (error) {
-
-            document.querySelector('[data_wrapper_1]').innerText = 'did not match any country';
-
+            document.querySelector('[data_wrapper_1]').innerText = 'Error';
         }
-
     }
 
     createHTMLelements(data) {
