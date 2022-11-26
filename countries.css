@@ -186,6 +186,15 @@ input{
     height:180px;
     border-radius:10px;
     margin: 50px;
+    animation: errorBoxAnimation .3s forwards;
+  }
+
+  @keyframes errorBoxAnimation {
+    0%{transform: translateX(0);}
+    25%{transform: translateX(5%);}
+    50%{transform: translateX(-5%);}
+    75%{transform: translateX(5%);}
+    100%{transform: translateX(0);}
   }
   
   #btnOk{
